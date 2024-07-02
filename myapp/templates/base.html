@@ -1,0 +1,25 @@
+{% load static %}
+
+<nav>
+    <ul>
+        <li>
+            <a href="/">Home</a>
+        </li>
+        <li>
+            <a href="{% url 'projects'%}">Project</a>
+        </li>
+        <li>
+            <a href="{% url 'tasks' %}">Tasks</a>
+        </li>
+        <li>
+            <a href="{% url 'create_tasks' %}">Create tasks</a>
+        </li>
+        <li>
+            <a href="{% url 'projectForm'%}">CreatePoject</a>
+        </li>
+    </ul>
+
+    <img src="{% static 'logo.jpg'%}" alt="logo" width="300" height="300">
+</nav>
+{%block content%}
+{%endblock%}

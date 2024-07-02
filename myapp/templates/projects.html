@@ -1,0 +1,11 @@
+{% extends 'base.html'%}
+
+{% block content%}
+<h1>Projects</h1>
+<p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam fuga libero incidunt! Dolores quibusdam a inventore quidem ducimus magnam ut. Quidem repellendus quae sit dolor voluptatibus quas quasi fuga sunt!
+</p>
+{% for project in project %}
+<h1>{{project.name}}</h1>
+{% endfor %}
+{% endblock %}

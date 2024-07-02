@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Tasks</h1>
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium fugiat error at nulla quaerat eos itaque ullam labore aliquid, beatae eum, iste, adipisci debitis. Hic, officiis? Itaque illo suscipit necessitatibus. Possimus recusandae ipsam deleniti sit ducimus voluptas! Mollitia impedit necessitatibus rem quae doloremque earum explicabo porro perspiciatis neque atque, consectetur consequuntur reiciendis quis in voluptate minus ducimus, voluptas debitis? Mollitia quo, tempora, natus ea veniam corporis incidunt voluptatum dolor accusamus repellat nam accusantium sequi necessitatibus minima id! Vitae animi quisquam mollitia quaerat ex, dolorum quidem explicabo ducimus ea nemo labore tenetur recusandae doloremque eius deserunt doloribus quia repudiandae porro delectus.</p>
+<!--  -->
+{%for task in task%}
+<div>
+    <h1>{{task.title}}</h1>
+    {% if task.done %}
+    <p>Tarea Realizada</p>
+    {% else%}
+    <p>Tarea Pendiente</p>
+    {% endif %}
+    <p>{{task.description}}</p>
+    <p>{{task.project.id}}</p>
+    <button>
+        Delete
+    </button>
+    <button >
+        Done
+    </button>
+</div>
+{%endfor%}
+{% endblock %}
